@@ -23,7 +23,6 @@ nav#mobile-menu {
   margin-right: 16px;
   height: 44px;
   overflow: hidden;
-
 }
 
 .nav-menu-movil {
@@ -37,7 +36,6 @@ nav#mobile-menu {
   list-style: none;
   transition: width 0.5s ease;
   overflow: hidden;
-
 }
 
 .nav-menu-movil li {
@@ -54,8 +52,6 @@ nav#mobile-menu {
   text-decoration: none;
 }
 
-
-
 nav#mobile-menu img {
   width: 24px;
   height: 24px;
@@ -63,11 +59,9 @@ nav#mobile-menu img {
 
 #hamburguesa:checked~.nav-menu-movil {
   width: 100%;
-
 }
 
 .nav-menu-movil li a:active {
-
   font-size: 16px;
   color: rgba(6, 10, 36, 0.56);
   letter-spacing: 0;
@@ -145,7 +139,6 @@ h2#titulo {
 }
 
 #podcasts {
-
   display: flex;
   flex-direction: column;
   margin-top: 21px;
@@ -153,9 +146,12 @@ h2#titulo {
   margin-right: 11px;
 }
 
-.pod {
+#podcasts iframe {
   width: 100%;
   height: 225px;
+}
+
+.pod {
   margin-bottom: 11px;
 }
 
@@ -571,9 +567,6 @@ div#datos {
 
   #podcasts iframe {
     height: 232px;
-  }
-
-  .pod {
     width: 50%;
   }
 
