@@ -25,6 +25,18 @@ nav#mobile-menu {
   overflow: hidden;
 }
 
+nav#mobile-menu label span{
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #000;  
+}
+#mobile-menu span:first-child{
+  margin-bottom: 3px;
+}
+#mobile-menu span:nth-child(2){
+  margin-bottom: 3px;
+}
 .nav-menu-movil {
   position: absolute;
   top: 44px;
@@ -51,16 +63,29 @@ nav#mobile-menu {
   line-height: 28px;
   text-decoration: none;
 }
-
-nav#mobile-menu img {
-  width: 24px;
-  height: 24px;
+nav#mobile-menu span{
+  transform-origin: 0% 0%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+nav#mobile-menu span:first-child{
+  transform-origin: 10% 0%;
+}
+nav#mobile-menu span:last-child{
+  transform-origin: 10% 100%;
 }
 
-#hamburguesa:checked~.nav-menu-movil {
+#hamburguesa:checked ~.nav-menu-movil {
   width: 100%;
 }
-
+#hamburguesa:checked + label span:nth-child(2){
+  opacity: 0;  
+}
+#hamburguesa:checked + label span:first-child{
+  transform: rotate(45deg);
+}
+#hamburguesa:checked + label span:last-child{
+  transform: rotate(-45deg);
+}
 .nav-menu-movil li a:active {
   font-size: 16px;
   color: rgba(6, 10, 36, 0.56);
@@ -152,6 +177,7 @@ h2#titulo {
 
 .pod {
   margin-bottom: 11px;
+  border: 0;
 }
 
 div#nosotros {
